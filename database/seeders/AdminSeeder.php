@@ -12,5 +12,7 @@ class AdminSeeder extends Seeder
 
     {
         Admin::query()->create(['name' => 'Aurora']);
+        Admin::query()->create(['name' => 'Shpresa']);
+
     }
 }

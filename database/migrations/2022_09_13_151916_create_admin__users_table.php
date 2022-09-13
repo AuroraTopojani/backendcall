@@ -6,17 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('admin__users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('admin_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->foreignId('admin_id') ->constrained();
+            $table->foreignId('users_id')->constrained();
         });
     }
 
