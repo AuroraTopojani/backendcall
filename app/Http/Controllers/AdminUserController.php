@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
-class User extends Controller
+class AdminUserController extends Controller
 {
-    //
+
 }
