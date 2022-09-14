@@ -1,15 +1,13 @@
 <?php
 
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AdminUserController;
 
 
-
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function () {
+    return view('welcome');
 });
-Route::apiResource('admins',AdminController::class)->only('index');
 
+
+Route::apiResource('admin-user', AdminUserController::class) -> only('store');

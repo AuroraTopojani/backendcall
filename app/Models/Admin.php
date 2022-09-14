@@ -12,9 +12,8 @@ class Admin extends Model
     use HasFactory;
     protected $fillable = ['name'];
 
-
     public function admins(): BelongsToMany
     {
-        return $this->belongsToMany(User::class)->using(Admin_User::class);
+        return $this->belongsToMany(User::class,'admin__users','admin_id','user_id')->using(Admin_User::class);
     }
 }

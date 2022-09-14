@@ -11,8 +11,17 @@ class AdminSeeder extends Seeder
     public function run()
 
     {
-        Admin::query()->create(['name' => 'Aurora']);
-        Admin::query()->create(['name' => 'Shpresa']);
+
+        Admin::query()->create([
+            'name' => 'Show'
+        ]);
+        Admin::query()->create([
+            'name' => 'Store'
+        ]);
+        Admin::query()->create([
+            'name' => 'Delete'
+        ]);
+
 
     }
 }
